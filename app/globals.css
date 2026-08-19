@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --paper-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-ink text-paper font-body antialiased;
+    background-image: var(--paper-grain),
+      radial-gradient(circle at 18% 8%, rgba(28, 66, 107, 0.35), transparent 42%),
+      radial-gradient(circle at 88% 2%, rgba(20, 49, 80, 0.4), transparent 40%);
+    background-attachment: fixed;
+  }
+  ::selection {
+    @apply bg-signal text-ink-900;
+  }
+  *:focus-visible {
+    outline: 3px solid #f6c544;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  /* Cream kennel-card paper */
+  .paper-card {
+    @apply relative bg-paper text-ink-900 rounded-sm shadow-kennel;
+    background-image: var(--paper-grain);
+    border: 1px solid theme("colors.paper.edge");
+  }
+  .paper-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5),
+      inset 0 -22px 34px -28px rgba(80, 66, 40, 0.45);
+    pointer-events: none;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 font-display uppercase tracking-wide
+      transition-transform duration-150 active:translate-y-0.5;
+  }
+  .btn-yellow {
+    @apply btn bg-signal text-ink-900 px-6 py-3 rounded-[3px] shadow-card
+      hover:bg-signal-bright;
+    box-shadow: 0 6px 0 0 #b9842099, 0 18px 30px -16px rgba(0, 0, 0, 0.6);
+  }
+  .btn-yellow:hover {
+    transform: translateY(-1px);
+  }
+  .btn-outline {
+    @apply btn border-2 border-paper/70 text-paper px-6 py-3 rounded-[3px]
+      hover:border-signal hover:text-signal;
+  }
+  .btn-ink {
+    @apply btn bg-ink-800 text-paper px-5 py-2.5 rounded-[3px] text-sm
+      hover:bg-ink-700;
+  }
+
+  .eyebrow {
+    @apply font-hand text-signal text-sm tracking-wide;
+  }
+
+  /* torn-paper section divider */
+  .torn-top {
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='24' preserveAspectRatio='none'%3E%3Cpath d='M0 24 V8 Q40 2 80 8 T160 8 T240 6 T320 10 T400 4 T480 9 T560 5 T640 10 T720 4 T800 9 T880 5 T960 10 T1040 4 T1120 9 T1200 6 V24 Z'/%3E%3C/svg%3E") bottom / 100% 24px no-repeat,
+      linear-gradient(#000 0 0) top / 100% calc(100% - 22px) no-repeat;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='24' preserveAspectRatio='none'%3E%3Cpath d='M0 24 V8 Q40 2 80 8 T160 8 T240 6 T320 10 T400 4 T480 9 T560 5 T640 10 T720 4 T800 9 T880 5 T960 10 T1040 4 T1120 9 T1200 6 V24 Z'/%3E%3C/svg%3E") bottom / 100% 24px no-repeat,
+      linear-gradient(#000 0 0) top / 100% calc(100% - 22px) no-repeat;
+  }
+
+  .tape {
+    @apply absolute h-6 w-20 bg-signal/70 rotate-[-4deg];
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+    background-image: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.25) 0%,
+      transparent 18%,
+      transparent 82%,
+      rgba(255, 255, 255, 0.25) 100%
+    );
+  }
+}
+
+@layer utilities {
+  .text-stroke {
+    -webkit-text-stroke: 1.5px #0b1b2e;
+  }
+  .underline-brush {
+    background-image: linear-gradient(theme("colors.signal.DEFAULT"), theme("colors.signal.DEFAULT"));
+    background-position: 0 92%;
+    background-repeat: no-repeat;
+    background-size: 100% 0.32em;
+  }
+}
