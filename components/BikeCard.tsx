@@ -6,7 +6,7 @@ import StatusBadge from "./StatusBadge";
 // Real photos by bike. Bikes not listed here fall back to the sketch.
 const BIKE_PHOTOS: Record<string, string> = {
   red: "/vader.jpeg",
-  blue: "/GSXR.jpg",
+  blue: "/lilbluehome.jpg",
   kawi: "/ZX7.jpg",
   yama: "/FZR.jpg",
 };
