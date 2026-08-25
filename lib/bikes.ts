@@ -49,7 +49,7 @@ export const STATUS_META: Record<
 export const bikes: Bike[] = [
   {
     slug: "red",
-    nickname: "HyperD",
+    nickname: "Hyper D",
     year: 1987,
     make: "Suzuki",
     model: "GSX-R750 Hyper Endurancer",
@@ -65,11 +65,11 @@ export const bikes: Bike[] = [
     intake: "Found under a tarp in a storage unit, two flat tires and a proud heart.",
     story:
       "Red came to us after three winters parked behind a self-storage unit, slowly forgotten. The carbs were gummed solid and the battery had long since given up, but the bones were honest. A FireBlade never really wants to sit still. After a full carb rebuild, fresh rubber, and a set of pipes that finally let her sing, Red is ready to chase apexes again. She is bold, a little dramatic, and absolutely worth it.",    storyParagraphs: [
-      "This '87 GSX-R750 HyperD was literally what you'd call a \"basket case.\" Thank goodness we came across him! This was a case of a previous owner being in over their head.",
+      "This '87 GSX-R750 Hyper D was literally what you'd call a \"basket case.\" Thank goodness we came across him! This was a case of a previous owner being in over their head.",
       "It started with us going to buy one solitary part. When we arrived, the part was still attached to this guy's frame — and the owner said, \"Take the whole thing.\" Say what?!",
       "He didn't know anything about the frame or the parts, including whether they were stolen or had a clean status. First, we contacted CHP and found out we were clean! The process then began to reassemble and save what was possibly our saddest case to date.",
-      "From a pallet and crates of parts, we had a whole bike… and we did make HyperD \"whole\" again.",
-      "When all's said and done, HyperD became an exquisite '87 Hyper Endurancer tribute. HyperD is a low-mileage GSX-R750, restored to perfection, that found a forever home with the assistance of Iconic Motorbikes!",
+      "From a pallet and crates of parts, we had a whole bike… and we did make Hyper D \"whole\" again.",
+      "When all's said and done, Hyper D became an exquisite '87 Hyper Endurancer tribute. Hyper D is a low-mileage GSX-R750, restored to perfection, that found a forever home with the assistance of Iconic Motorbikes!",
       "One of our proudest rescues — and this happy bike is alive and well!",
     ],
     restoration: 100,
@@ -77,7 +77,7 @@ export const bikes: Bike[] = [
       { day: "Day 1", title: "A True Basket Case.", note: "A pile of parts, with unknown history.", phase: "intake" },
       { day: "Day 30", title: "Stripped & cleaned up", note: "Frame cleaned up, and the journey began.", phase: "during" },
       { day: "Day 75", title: "Engine rebuild, a fresh start", note: "Rebuilt carbs, fork seals, fresh fluids.", phase: "during" },
-      { day: "Day 120", title: "Looking better every day", note: "New plastics, paint correction, dyno tuned.", phase: "after" },
+      { day: "Day 120", title: "Looking better every day", note: "New plastics, powder coated rims, dyno tuned.", phase: "after" },
       { day: "Forever home", title: "Ready for new adventures", note: "Cleared for adoption.", phase: "graduation" },
     ],
   },
