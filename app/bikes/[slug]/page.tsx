@@ -8,10 +8,26 @@ import { bikes, getBike } from "@/lib/bikes";
 
 // Real photos by bike (same set used on the cards).
 const BIKE_PHOTOS: Record<string, string> = {
-  blue: "/GSXR.jpg",
+  blue: "/lilblue5.jpg",
   kawi: "/ZX7.jpg",
   yama: "/FZR.jpg",
   red: "/vader.jpeg",
+};
+const TIMELINE_PHOTOS: Record<string, string[]> = {
+  red: [
+    "/hyped1.jpg",
+    "/hyped2.jpg",
+    "/hyped3.jpg",
+    "/hyped4.jpg",
+    "/hyped6.jpg",
+  ],
+  blue: [
+    "/lilblue1.jpg",
+    "/lilblue2.jpg",
+    "/lilblue3.jpg",
+    "/lilblue4.jpg",
+    "/lilblue5.jpg",
+  ],
 };
 
 export function generateStaticParams() {
@@ -199,6 +215,7 @@ export default function BikeProfile({ params }: { params: { slug: string } }) {
             steps={bike.timeline}
             bikeColor={bike.color}
             accent={bike.accent}
+            photos={TIMELINE_PHOTOS[bike.slug]}
           />
         </div>
       </section>

@@ -23,6 +23,13 @@ const TIMELINE_PHOTOS: Record<string, string[]> = {
     "/hyped4.jpg",
     "/hyped6.jpg",
   ],
+  blue: [
+    "/lilblue1.jpg",
+    "/lilblue2.jpg",
+    "/lilblue3.jpg",
+    "/lilblue4.jpg",
+    "/lilblue5.jpg",
+  ],
 };
 
 export default function RescueStoriesPage() {
